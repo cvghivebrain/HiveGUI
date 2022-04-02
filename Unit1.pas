@@ -273,7 +273,7 @@ begin
   FillChar(ProcInfo,SizeOf(TProcessInformation),#0);
   StartInfo.cb := SizeOf(TStartupInfo);
   // Run program.
-  if not CreateProcess(nil,PChar(command),nil,nil,false,CREATE_NEW_PROCESS_GROUP+NORMAL_PRIORITY_CLASS,nil,nil,StartInfo,ProcInfo) then
+  if not CreateProcess(nil,PChar(command),nil,nil,false,CREATE_NEW_PROCESS_GROUP+NORMAL_PRIORITY_CLASS+CREATE_NO_WINDOW,nil,nil,StartInfo,ProcInfo) then
     begin
     memoEvents.Lines.Add('Command failed.');
     end

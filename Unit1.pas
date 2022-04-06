@@ -110,6 +110,7 @@ begin
       lstCom.ItemIndex := 0;
       SelectItem(0);
       end;
+    CloseFile(inifile);
     end;
 end;
 
@@ -141,7 +142,6 @@ begin
 end;
 
 procedure TForm1.lstComClick(Sender: TObject);
-var s: string;
 begin
   if lstCom.ItemIndex > -1 then SelectItem(lstCom.ItemIndex); // Check that something is selected.
 end;

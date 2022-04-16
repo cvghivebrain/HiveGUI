@@ -237,12 +237,13 @@ begin
     begin
     editInput.Text := IncludeTrailingPathDelimiter(editInput.Text); // Add trailing backslash.
     editOutput.Text := IncludeTrailingPathDelimiter(editOutput.Text); // Add trailing backslash.
+    if Copy(editExt.Text,1,1) = '.' then ext := editExt.Text
+    else ext := '.'+editExt.Text; // Use specified extension (with dot).
     if FindFirst(editInput.Text+editMask.Text, faAnyFile-faDirectory, rec) = 0 then
       begin
       repeat
         begin
-        if editExt.Text = '' then ext := ExtractFileExt(rec.Name) // Keep extension from input file.
-        else ext := '.'+editExt.Text; // Use specified extension.
+        if editExt.Text = '' then ext := ExtractFileExt(rec.Name); // Keep extension from input file.
         outfile := editOutput.Text+Explode(rec.Name,'.',0)+ext; // Full path and name of output file.
         RunCommand(editInput.Text+rec.Name,outfile);
         if FileExists(outfile) = false then memoEvents.Lines.Add(outfile+' not created.');

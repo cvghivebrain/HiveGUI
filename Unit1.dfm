@@ -4,7 +4,7 @@ object Form1: TForm1
   BorderStyle = bsDialog
   Caption = 'HiveGUI'
   ClientHeight = 622
-  ClientWidth = 910
+  ClientWidth = 1088
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -47,31 +47,43 @@ object Form1: TForm1
   object editInput: TEdit
     Left = 248
     Top = 41
-    Width = 478
-    Height = 21
+    Width = 657
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object editOutput: TEdit
     Left = 248
-    Top = 68
-    Width = 478
-    Height = 21
+    Top = 74
+    Width = 657
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object btnInput: TButton
-    Left = 732
+    Left = 911
     Top = 41
     Width = 76
-    Height = 21
+    Height = 27
     Caption = 'Select Input'
     TabOrder = 3
     OnClick = btnInputClick
   end
   object btnOutput: TButton
-    Left = 732
-    Top = 68
+    Left = 911
+    Top = 74
     Width = 76
-    Height = 21
+    Height = 27
     Caption = 'Select Output'
     TabOrder = 4
     OnClick = btnOutputClick
@@ -79,7 +91,7 @@ object Form1: TForm1
   object memoEvents: TMemo
     Left = 248
     Top = 172
-    Width = 653
+    Width = 832
     Height = 442
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -90,8 +102,8 @@ object Form1: TForm1
     TabOrder = 5
   end
   object btnRun: TButton
-    Left = 732
-    Top = 102
+    Left = 911
+    Top = 107
     Width = 169
     Height = 34
     Caption = 'Run'
@@ -134,27 +146,39 @@ object Form1: TForm1
     OnClick = btnFolderClick
   end
   object editMask: TEdit
-    Left = 814
+    Left = 993
     Top = 41
     Width = 87
-    Height = 21
+    Height = 27
     Hint = 'Input file mask'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 10
     Text = '*.*'
     Visible = False
   end
   object editExt: TEdit
-    Left = 814
-    Top = 68
+    Left = 993
+    Top = 74
     Width = 87
-    Height = 21
+    Height = 27
     Hint = 'Output extension (leave blank to keep original)'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 11
     Visible = False
   end
   object chkOverwrite: TCheckBox
     Left = 248
-    Top = 95
+    Top = 107
     Width = 97
     Height = 17
     Caption = 'Overwrite Files'
